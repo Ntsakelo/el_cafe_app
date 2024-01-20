@@ -66,20 +66,13 @@ body{
   background-color: #fff;
   color:#000;
 }
-.hero{
+.home_hero{
   height: 700px;
   margin-top: 60px;
   background-color: #fabc38;
   margin-bottom: 50px;
 }
-.home_hero{
-  width: 80%;
-  margin: auto;
-  height: 500px;
-  /* border: 1px solid red; */
-  position: relative;
-  top: 100px;
-}
+
 .slideImage{
   width: 60%;
   height: 60%;
