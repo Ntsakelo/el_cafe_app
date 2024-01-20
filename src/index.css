@@ -1,13 +1,476 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300&display=swap');
+
+body{
+  font-family: 'Ubuntu', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+.main-container{
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar{
+  height: 60px;
+  /* background-color:#CC142C; */
+  background-color:#fff;
+  color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  z-index: 100;
+  transition: 0.5s linear all;
 }
+.active{
+  background-color: #CC142C;
+  transition: 0.5s linear all;
+}
+.active a{
+  color: white;
+}
+.active .navToggle path{
+  color: #fff;
+}
+.logo{
+  height: 70%;
+  margin-left:20px;
+  margin-top: 5px;
+}
+#navLinks{
+  text-align: right;
+}
+.navLink{
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #CC142C;
+  font-weight: 100;
+}
+.navToggle{
+  margin-top: 10px;
+  margin-right: 20px;
+}
+#loginLink{
+  border:1px solid #CC142C;
+  padding: 10px;
+}
+.active #loginLink{
+  border-color: #fff;
+}
+#signUpLink{
+  padding:10px;
+  background-color: #fff;
+  color:#000;
+}
+.hero{
+  height: 700px;
+  margin-top: 60px;
+  background-color: #fabc38;
+  margin-bottom: 50px;
+}
+.campaign-section{
+  width: 80%;
+  margin: auto;
+  height: 500px;
+  border: 1px solid red;
+  position: relative;
+  top: 100px;
+}
+.slideImage{
+  width: 60%;
+  height: 60%;
+  display: block;
+  margin: auto;
+  /* margin-top: 80px; */
+  position: relative;
+  top: 30px;
+  
+}
+.effect{
+  width: 100%;
+  height: 400px;
+  position: relative;
+  top: 200px;
+}
+.content{
+  color: #000;
+  position: relative;
+  background-image: url('./pattern.svg');
+}
+.welcomeImage{
+  width: 400px;
+  height: 200px;
+  float: left;
+  position: relative;
+  top: 40px;
+}
+.welcomeContent{
+  text-align: center;
+}
+.content-text{
+  width: 50%;
+  float: right;
+}
+.welcomeContent h3{
+  color:#CC142C;
+  text-align: left;
+}
+.welcomeContent h1,p{
+  /* width: 50%; */
+  margin: auto;
+  text-align: left;
+}
+.welcomeContent p{
+  margin-top: 5px;
+  color: #808080;
+}
+.content-action{
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  text-align: left;
+}
+.about-link{
+  text-decoration: none;
+  display: block;
+  background-color: #CC142C;
+  color: white;
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.specials-content,.menu-content{
+  padding-top: 100px;
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+.specialsHead,.menuHead{
+  text-align: center;
+  color:#CC142C;
+}
+.specialsHead-1,.menuHead-1{
+  width: 30%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.special-items-slide{
+  width: 90%;
+  margin: auto;
+  height: 500px;
+}
+.item{
+  height: 350px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
+.special-item{
+  height: 100%;
+  width: 80%;
+  border: 2px dotted #808080;
+  margin: auto;
+}
+.special-item *{
+  text-align: center;
+}
+.itemName{
+  margin-top: 20px;
+}
+.price{
+  color:#CC142C;
+}
+.orderNowBtn{
+  display: block;
+  margin: auto;
+  height: 30px;
+  border-radius: 20px;
+  background-color: white;
+  color: #CC142C;
+  border: 1px solid #cfcdcd;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding:0 10px 0 10px;
+}
+.orderNowBtn:hover{
+  background-color: #CC142C;
+  color:#fff;
+}
+.itemImage{
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+.menuItem{
+  margin: auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #808080;
+  width:60%;
+  height: 100%;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.menu-item-display-pic{
+  height: 150px;
+  width: 150px;
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+}
+.menu-item-details{
+  width: calc(100% - 150px);
+  display: inline;
+  float: right;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.menu-item-details p,h3{
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.menu-item-image{
+  width: 100%;
+  height: 100%;
+}
+.menu-item-name{
+  margin-top: 50px;
+}
+.flag{
+  background-color: #fabc38;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+.campaign-container{
+  /* border: 1px solid red; */
+  height: 400px;
+  width: 100%;
+  margin-top: 0;
+}
+.item-icon{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 5px;
+  background-color: #f4e8d8;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.item-icon:hover{
+  border: 1px solid #CC142C;
+}
+.icon{
+  margin-top: 20px;
+}
+/* .icon {
+  border: 1px solid red;
+  text-align: center;
+} */
+#icon{
+  color: black;
+  border: 1px solid red;
+  width: 50px;
+  height:50px;
+}
+.item-head{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.active{
+  background-color: #CC142C;
+}
+.active path{
+  color:#fff;
+}
+/* .descriptions{
+  width: 80%;
+  margin: auto;
+} */
+.description-btn{
+  display: block;
+  margin-top: 30px;
+  height: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  color: #fff;
+  background-color: #CC142C;
+  border-radius: 5px;
+}
+.img-display{
+  width: 300px;
+  height: 100%;
+  /* display: block;
+  margin: auto; */
+  float: right;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.restaurant-setting{
+  margin-top: 50px;
+  /* height: 500px; */
+  background-color: #CC142C;
+  color: white;
+}
+.restaurant-img{
+  height: 350px;
+  width: 300px;
+  float: right;
+  display: block;
+  margin: 50px 0 50px 0;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.restaurant-head{
+  margin-top: 100px;
+}
+.reservationBtn{
+  height: 35px;
+  display: block;
+  margin-top: 30px;
+  color:#CC142C;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.imageStack{
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 100px;
+}
+.reviewContainer{
+  width: 100%;
+  background-color: #CC142C;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: 500px;
+}
+.customerReviews{
+  height: 400px;
+  width: 80%;
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  top: 50px;
+}
+.customerReviews p,
+.customerReviews h1{
+  text-align: center;
+  margin: 0;
+}
+.customerReviews p{
+  color:#CC142C;
+  padding-top: 20px;
+}
+.commas{
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+}
+#reviewText{
+  color: black;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.reviewer{
+  text-align: center;
+  margin-top: 30px;
+  color:#808080
+}
+@media screen and (width < 46.25em){
+  .nav-desktop{
+    display: none;
+  }
+  .logo{
+    width: 130px;
+  }
+  .slideImage{
+    width: 90%;
+  }
+  .imageList{
+    width: 50%;
+  }
+}
+
+@media screen and (width >= 46.25em) {
+  .nav-mobile{
+    display: none;
+  }
+  
+}
+
+@media screen and (width < 56.25em){
+  .content-text{
+    width: 100%;
+    float: none;
+  }
+  .content-text p,
+  .content-text h3,
+  .content-text h1,
+  .content-text div{
+    width: 50%;
+    margin: auto;
+  }
+  .content-text p{
+    margin-bottom: 10px;
+  }
+  .content-text h3{
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .content-action{
+    margin-top: 20px;
+  }
+  .welcomeImage{
+    float: none;
+    display: block;
+    margin: auto;
+  }
+  #menu-container{
+    width: 100%;
+  }
+  .menuItem{
+    width: 90%;
+  }
+  .welcomeImage{
+    width: 200px;
+    height: 100px;
+  }
+  #description-image{
+    display: none;
+  }
+  .restaurant-setting{
+    text-align: center;
+  }
+  .restaurant-head{
+    margin-top: 20px;
+    
+  }
+  .restaurant-img{
+    display: block;
+    float: none;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 100%;
+    min-width: 60%;
+    height: 300px;
+  }
+  .reservationBtn{
+    margin-bottom: 50px;
+  }
+}
+
