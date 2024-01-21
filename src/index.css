@@ -67,10 +67,10 @@ body{
   color:#000;
 }
 .home_hero{
-  height: 700px;
   margin-top: 60px;
   background-color: #fabc38;
   margin-bottom: 50px;
+  padding: 30px 0 30px 0;
 }
 
 .slideImage{
@@ -113,7 +113,6 @@ body{
   text-align: left;
 }
 .welcomeContent h1,p{
-  /* width: 50%; */
   margin: auto;
   text-align: left;
 }
@@ -243,7 +242,6 @@ body{
   border-radius: 20px;
 }
 .campaign-container{
-  /* border: 1px solid red; */
   height: 400px;
   width: 100%;
   margin-top: 0;
@@ -265,10 +263,7 @@ body{
 .icon{
   margin-top: 20px;
 }
-/* .icon {
-  border: 1px solid red;
-  text-align: center;
-} */
+
 #icon{
   color: black;
   border: 1px solid red;
@@ -285,10 +280,7 @@ body{
 .active path{
   color:#fff;
 }
-/* .descriptions{
-  width: 80%;
-  margin: auto;
-} */
+
 .description-btn{
   display: block;
   margin-top: 30px;
@@ -397,6 +389,16 @@ body{
   .imageList{
     width: 50%;
   }
+  .loyalty-signup-btn{
+    display: block;
+    width: 100%;
+    /* margin-bottom: 30px; */
+  }
+  .loyalty-signup-email{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (width >= 46.25em) {
@@ -466,4 +468,7 @@ body{
     margin-bottom: 50px;
   }
 }
+
+
+
 

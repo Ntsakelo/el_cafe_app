@@ -4,20 +4,10 @@ import { Link } from "react-router-dom";
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import { useRef } from "react";
 
 export const Navbar = () => {
-   const divElement = useRef<HTMLDivElement>(null);
-   window.addEventListener('scroll',() => {
-      if(window.scrollY >= 700){
-         divElement.current?.classList.add('active');
-         divElement.current?.classList.remove('inactive');
-      }else{
-         divElement.current?.classList.remove('active');
-      }
-   })
     return(
-        <div className="navbar" ref={divElement}>
+        <div className="navbar">
            <Grid container>
               <Grid item xs={4}>
                  <Link to="/">
