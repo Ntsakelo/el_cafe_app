@@ -29,16 +29,16 @@ export const Navbar = () => {
                      <Link to="/menu" className="navLink">
                         Menu
                      </Link>
-                     <Link to="/menu" className="navLink">
+                     <Link to="/rewards" className="navLink">
                         Rewards
                      </Link>
-                     <Link to="/menu" className="navLink">
+                     <Link to="reservation" className="navLink">
                          Reservation
                      </Link>
-                     <Link to="/menu" className="navLink">
+                     <Link to="/" className="navLink">
                         <PermIdentityOutlinedIcon sx={{position:'relative',top:'5px'}}/>
                      </Link>
-                     <Link to="/menu" className="navLink">
+                     <Link to="/" className="navLink">
                         <ShoppingCartOutlinedIcon sx={{position:'relative',top:'5px'}}/>
                      </Link>
                   </div>

@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { useNavigate } from "react-router-dom";
 
 interface Item {
   id: number;
@@ -17,6 +18,7 @@ interface Item {
 export const Slides = ({settings}: any) => {
   const [items, setItems] = useState<Item[]>();
   const baseUrl = "https://el-cafe-api.onrender.com/menu";
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios({
@@ -27,6 +29,9 @@ export const Slides = ({settings}: any) => {
       setItems(response.data);
     });
   });
+  const handleNavigation = (url:string) => {
+    navigate(url)
+  } 
   return (
     <Slider {...settings} >
       {items && items.map(item => {
@@ -36,7 +41,7 @@ export const Slides = ({settings}: any) => {
               <h3 className="itemName">{item.title}</h3>
               <p className="ingredients">{item.ingredients}</p>
               <h3 className="price">{item.item_price}</h3>
-              <button className="orderNowBtn" id={item.id.toString()}>
+              <button className="orderNowBtn" id={item.id.toString()} onClick={() => {handleNavigation(`/product/${item.title}`)}}>
                 <ShoppingCartOutlinedIcon
                   sx={{
                     fontSize: "16px",
