@@ -25,7 +25,6 @@ export const Slides = ({settings}: any) => {
       method: "get",
       baseURL: baseUrl,
     }).then((response) => {
-      console.log(response);
       setItems(response.data);
     });
   });

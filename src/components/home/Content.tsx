@@ -15,7 +15,6 @@ export const Content = () => {
     const [description,setDescription] = useState('people'); 
 
     const handleDefault = (e:any) => {
-      console.log(e.target.parentElement.parentElement.children)
        e.target.parentElement.parentElement.children[0].classList.add('active')
     }
 
